@@ -1,21 +1,37 @@
-// Theme Switch
-const btn = document.getElementById("themeBtn");
+// Tunggu halaman siap
+document.addEventListener("DOMContentLoaded", function () {
 
-btn.onclick = () => {
-  document.body.classList.toggle("light");
-  btn.textContent =
-    document.body.classList.contains("light") ? "🌞" : "🌙";
-};
+  // Theme Switch
+  const btn = document.getElementById("themeBtn");
 
-// Scroll Animation
-const fades = document.querySelectorAll(".fade");
+  if (btn) {
+    btn.onclick = () => {
+      document.body.classList.toggle("light");
 
-window.addEventListener("scroll", () => {
-  fades.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add("show");
-    }
-  });
+      btn.textContent =
+        document.body.classList.contains("light")
+          ? "🌞"
+          : "🌙";
+    };
+  }
+
+  // Scroll Animation
+  const fades = document.querySelectorAll(".fade");
+
+  function showOnScroll() {
+    fades.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+
+      if (top < window.innerHeight - 100) {
+        el.classList.add("show");
+      }
+    });
+  }
+
+  // Jalankan saat load
+  showOnScroll();
+
+  // Jalankan saat scroll
+  window.addEventListener("scroll", showOnScroll);
+
 });
-
