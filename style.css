@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  background: #020617;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero img {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
+}
+
+section {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #38bdf8;
+}
+
+.skills span {
+  background: #1e293b;
+  padding: 8px 12px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+.portfolio img {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  background: #020617;
+  padding: 15px;
+}
